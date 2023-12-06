@@ -12,11 +12,11 @@ import './index.css';
 //   </React.StrictMode>
 // );
 
-import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 //중요한 코드!
  ReactDOM.render(
  <React.StrictMode>
- <Login />
+ <Register />
  </React.StrictMode>,
  document.getElementById('root')
 );

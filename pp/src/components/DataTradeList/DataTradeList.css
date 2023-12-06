@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0; /* 너비를 100%로 설정 */
-  background: #eadbc8;
+  background: white;
   color: black;
   padding: 8px; /* 내용과 경계 사이의 여백 */
   text-align: center; /* 텍스트를 중앙 정렬 */
