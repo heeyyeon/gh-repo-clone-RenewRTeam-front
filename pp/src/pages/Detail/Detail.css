@@ -1,0 +1,71 @@
+.Detail-wrapper {
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    font-family: SOYOMapleRegular;
+
+}
+
+.Detail-image img{
+    width: 390px;
+    height: 390px;
+    vertical-align: middle;
+}
+
+.Detail-title {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    width: 100%;
+    /* transform: translate(-50%, -50%); */
+    text-align: left;
+    color: white;
+    font-family: SOYOMapleRegular;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 16px;
+}
+
+.Detail-condition {
+    width: 390px;
+    height: 95px;
+    flex-shrink: 0;
+    background-color: #EFEFEF;
+    border-radius: 20px;
+    align-content: center;
+    padding-top: 1%;
+    padding-bottom: 16px;
+}
+
+.footer-button {
+    position: fixed;
+    width: 390px;
+    height: 34px;
+    /* bottom: 0; */
+    border-radius: 12px;
+    background: #214FC7;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 13px; 
+}
+
+.Detail-user {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+}
+
+.Detail-user p {
+    margin-top: 10px; /* 기본 마진 제거 */
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
