@@ -1,0 +1,75 @@
+.signup-type-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .signup-type-logo {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    margin-bottom: 25px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  .signup-type-options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  
+  .signup-type-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #DFDFDF; 
+    padding: 17px; 
+    background-color: #fff; 
+    border-radius: 12px;
+  }
+
+  .signup-type-option span {
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .signup-type-option img {
+    margin-bottom: 10px;
+  }
+
+  .Next-button button {
+    width: 358px;
+    height: 53px;
+    padding: 1rem;
+    background-color: #A5A5A5;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+
+  .Back-button button {
+    width: 358px;
+    height: 53px;
+    padding: 1rem;
+    background-color: #FFF;
+    color: #214FC7;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #214FC7;
+  }
