@@ -1,0 +1,67 @@
+.trading {
+    width: 390px;
+    height: 71px;  
+    border: 1px solid var(#DFDFDF);
+    margin: 16px ;
+    display: flex;
+}
+
+.trading-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.trading-name,
+.trading-date,
+.trading-trading,
+.trading-balance {
+    margin: 0px 12px;
+}
+
+.trading-name {
+    color: black;
+    font-family: 'SOYOMapleRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative; /* 위치 지정을 위해 필요 */
+}
+
+.trading-date {
+    top: 6px; /* name 보다 1px 아래에 위치 */
+    left: 60px; /* image 에서 12px 떨어진 오른쪽에 위치 */
+    color:  #6F6F6F;
+    font-family: 'SOYOMapleRegular';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.trading-trading {
+    color: black;
+    text-align: right;
+    font-family: 'SOYOMapleRegular';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    
+}
+
+.trading-balance {
+    top: 4px;
+    /* right:16px; */
+    color:  #6F6F6F;
+    text-align: right;
+    font-family: 'SOYOMapleRegular';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

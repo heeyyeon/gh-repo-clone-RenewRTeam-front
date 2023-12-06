@@ -1,0 +1,26 @@
+.reward {
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    position: relative;
+    font-family: 'SOYOMapleRegular';
+}
+
+.reward-button {
+    width: 340px;
+    /* flex-shrink: 0; */
+    /* position: relative; */
+    border: 3px solid #214FC7;
+    border-radius: 12px;
+    border-color: #214FC7;
+    background-color: white;
+    padding: 10px; /* 내용과 테두리 사이 간격 조정 */
+    color: #214FC7;
+    text-align: center;
+    margin: 16px; /*상단 여백 추가*/
+
+    display: flex; /* 내용을 수직, 수평 중앙으로 정렬하기 위한 속성 추가 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
