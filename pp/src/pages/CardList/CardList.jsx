@@ -23,6 +23,13 @@ function CardList({ listTitle }) {
         description: '설명 2',
         limit: '제한 2',
       },
+      {
+        id: 3,
+        image: 'https://via.placeholder.com/150',
+        title: '카드 제목 3',
+        description: '설명 3',
+        limit: '제한 3',
+      },
       // 추가 카드 데이터...
     ]);
 
@@ -48,7 +55,7 @@ function CardList({ listTitle }) {
       <DataTradeList listTitle={listTitle} />
       <div className="card-list">
         {cards.map((card, index) => (
-          <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함시킵니다 */}
+          <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함 */}
             <Card 
               image={card.image} 
               title={card.title} 
