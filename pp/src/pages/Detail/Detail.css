@@ -1,11 +1,13 @@
 .Detail-wrapper {
     width: 390px;
-    height: 844px;
     margin: 0 auto;
     position: relative;
-    text-align: center;
     font-family: SOYOMapleRegular;
-
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px); /* .nav-bar 높이만큼 빼줍니다 */
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    padding-bottom: 56px; /* .footer-button 높이 + .nav-bar 높이 */
 }
 
 .Detail-image img{
@@ -42,16 +44,15 @@
 }
 
 .footer-button {
-    position: fixed;
     width: 390px;
     height: 34px;
-    /* bottom: 0; */
     border-radius: 12px;
     background: #214FC7;
     color: #FFFFFF;
-    margin-bottom: 0px;
     text-align: center;
-    padding-top: 13px; 
+    padding-top: 13px; /* 버튼 내부 콘텐츠가 중앙에 오도록 조정 */
+    margin-bottom: 10px; /* .nav-bar와의 간격을 위해 조정 */
+   
 }
 
 .Detail-user {

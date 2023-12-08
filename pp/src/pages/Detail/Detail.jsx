@@ -2,6 +2,7 @@
 //import { useParams } from 'react-router-dom';
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
+import DataNavbar from '../../components/DataNavbar/DataNavbar';
 import './Detail.css';
 
 function Detail() {
@@ -22,7 +23,7 @@ function Detail() {
 
 //     useEffect(() => {
 //         const fetchData = async () => {
-//             const token = "test";
+//             const token = "test"
 //             try {
 //                 const res = await axios.get(`http://172.16.228.187:8080/collects/${id}`, {  // id를 사용하는 URL
 //                     headers: {
@@ -70,8 +71,8 @@ function Detail() {
                     {model ? model.description : 'Loading...'}
                 </p>
             </div>
-
             <div className='footer-button'>참여하기</div>
+            <DataNavbar />
         </div>
     );
 }
