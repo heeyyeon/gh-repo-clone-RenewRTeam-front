@@ -1,0 +1,69 @@
+.data-submission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 390px;  
+    height: 844px;
+    /* background-color: #f0ece5; */
+    justify-content: center;
+    margin: 0 auto; /* 화면을 중앙에 배치 */
+    position: relative; /* 포지셔닝 컨텍스트를 지정 */
+    margin-top: 70px;
+    justify-content: space-between; /* 위, 아래 여백을 동일하게 조정 */
+  }
+  
+  .image-upload-section {
+    border: 2px dashed blue; /* 이 부분은 디자인에 맞게 색상을 조정하세요. */
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 35px;
+    cursor: pointer;
+    width: 358px;
+    height: 250px;
+    margin-left: 4px;
+    margin-top: 20px;
+  }
+  
+  .upload-placeholder {
+    color: #214FC7; 
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28%;
+    font-family: Pretendard;
+  }
+  
+  .description-input {
+    width: 358px;
+    height: 250px;
+    margin-left: 2px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 합니다. */
+  }
+  
+  .Next-button button {
+    width: 358px;
+    height: 53px;
+    margin-left: 4px;
+    padding: 1rem;
+    background-color: #214FC7;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 100px;
+  }
+  
+  .submission-form textarea{
+    color:#A5A5A5;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  
