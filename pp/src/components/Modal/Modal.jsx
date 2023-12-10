@@ -1,12 +1,15 @@
 import React from 'react';
+import './Modal.css';
 
 function Modal({ onConfirm, onCancel }) {
   return (
     <div className="custom-modal-backdrop">
     <div className="custom-modal-content">
-        <p>정말로 이 사진을 삭제하시겠습니까?</p>
-        <button className="confirm-button" onClick={onConfirm}>확인</button>
+        <p><b>주의!</b></p>
+        <p>데이터를 삭제하시겠습니까?</p>
         <button className="cancel-button" onClick={onCancel}>취소</button>
+        <button className="confirm-button" onClick={onConfirm}>삭제</button>
+        
     </div>
     </div>
   );
