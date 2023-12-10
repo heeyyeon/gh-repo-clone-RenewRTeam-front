@@ -39,7 +39,7 @@ function CardList({ listTitle }) {
 //   useEffect(() => {
 //     const fetchCards = async () => {
 //       try {
-//         const response = await axios.get('YOUR_API_ENDPOINT');  // API 엔드포인트로 변경하세요
+//         const response = await axios.get('YOUR_API_ENDPOINT');  // 후에 API 엔드포인트로 변경해야함
 //         setCards(response.data);  // API 응답으로 받은 데이터로 상태 업데이트
 //       } catch (error) {
 //         console.error('Error fetching cards:', error);
