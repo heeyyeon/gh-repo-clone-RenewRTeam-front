@@ -1,0 +1,45 @@
+.custom-modal-backdrop {
+    position: fixed; /* 화면에 고정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 */
+    display: flex; /* 중앙 정렬을 위해 flex 설정 */
+    align-items: center; /* 세로 중앙 */
+    justify-content: center; /* 가로 중앙 */
+    z-index: 1000; /* 다른 요소들 위에 레이어 */
+  }
+  
+  /* 모달 콘텐츠의 스타일 */
+  .custom-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* 최대 너비 설정 */
+    width: 100%; /* 화면 크기에 따라 너비 조정 */
+    text-align: center;
+  }
+  
+  /* 모달 내부 버튼 스타일 */
+  .custom-modal-content button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* 확인 버튼 스타일 */
+  .custom-modal-content .confirm-button {
+    background-color: #4CAF50; /* 녹색 */
+    color: white;
+  }
+  
+  /* 취소 버튼 스타일 */
+  .custom-modal-content .cancel-button {
+    background-color: #f44336; /* 빨간색 */
+    color: white;
+  }
+  
