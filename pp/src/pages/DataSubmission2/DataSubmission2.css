@@ -13,7 +13,7 @@
   }
   
   .image-upload-section {
-    border: 2px dashed blue; /* 이 부분은 디자인에 맞게 색상을 조정하세요. */
+    border: 2px dashed #214FC7; 
     border-radius: 8px;
     text-align: center;
     margin-bottom: 35px;

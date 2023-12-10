@@ -1,0 +1,23 @@
+.user {
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'SOYOMapleRegular';
+}
+
+.user-menu {
+    width: 358px;
+    height: fit-content;
+    margin: 24px 16px 16px;
+
+}
+
+.user-menu p {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: '500';
+    word-wrap: 'break-word';
+    border-bottom: 1px solid #EFEFEF;
+    font-weight: bold;
+}

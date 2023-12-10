@@ -1,66 +1,125 @@
-.data-submission-form-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 390px; 
-    padding: 20px;
-    margin: auto;
-  }
-  
-  .image-preview {
-    width: 100%;
-    height: 200px; 
-    background-color: #f0f0f0; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .image-preview img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  
-  .image-placeholder {
-    font-size: 16px;
-    color: #888;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  form input,
-  form textarea {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form textarea {
-    height: 100px;
-    resize: vertical; 
-  }
-  
-  form .submit-button {
-    padding: 15px 20px;
-    background-color: #214FC7; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  
-  
+.data-submission-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 390px;  
+  height: 844px;
+  /* background-color: #f0ece5; */
+  justify-content: center;
+  margin: 0 auto; /* 화면을 중앙에 배치 */
+  position: relative; /* 포지셔닝 컨텍스트를 지정 */
+  margin-top: 70px;
+  justify-content: space-between; 
+  font-family: Pretendard;
+}
+
+.image-upload-section {
+  border: 2px dashed blue; /* 이 부분은 디자인에 맞게 색상을 조정하세요. */
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 35px;
+  cursor: pointer;
+  width: 358px;
+  height: 250px;
+  margin-left: 4px;
+  margin-top: 20px;
+}
+
+.upload-placeholder {
+  color: #214FC7; 
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Pretendard;
+  top: 50%; /* 상위 요소 중앙에 배치 */
+  left: 50%; /* 상위 요소 중앙에 배치 */
+  transform: translate(-50%, -50%); /* 정확히 중앙에 오도록 조정 */
+  width: 100%; /* 너비를 부모의 100%로 설정 */
+  height: 100%; /* 높이를 부모의 100%로 설정 */
+  position: absolute;
+}
+
+.Next-button button {
+  width: 358px;
+  height: 53px;
+  margin-left: 4px;
+  padding: 1rem;
+  background-color: #214FC7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: Pretendard;
+}
+
+.image-upload-section img {
+  width: 100%; /* 컨테이너의 전체 너비를 차지하도록 설정 */
+  height: 250px; /* 이미지의 높이가 자동으로 조정되도록 설정 */
+  object-fit: cover; /* 이미지가 비율을 유지하면서 컨테이너를 꽉 채우도록 설정 */
+  object-position: center;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.data-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Pretendard;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-family: Pretendard;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  color: #A5A5A5;
+  font-size: 16px;
+  font-weight: 500;
+  width: 326px;
+  height: 10px;
+  justify-content: center;
+  font-family: Pretendard;
+}
+
+.form-group input:not(:placeholder-shown) {
+  color: #000; /* 사용자가 입력을 시작하면 폰트 색상을 검은색으로 변경 */
+}
+
+.submission-form{
+  align-items: center;
+}
+
+/* @font-face {
+  font-family: 'Pretendard';
+  font-weight: normal;
+  src: url("./../../fonts/Pretendard.ttf") format("truetype");
+} */

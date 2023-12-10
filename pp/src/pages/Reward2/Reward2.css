@@ -1,0 +1,21 @@
+.reward {
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'SOYOMapleRegular';
+}
+
+.DepositButton {
+    width: 358px;
+    height: 34px;
+    border-radius: 12px;
+    border: 1px solid var(--primary, #214FC7);
+    background-color: white;
+    color: #214FC7;
+    text-align: center;
+    padding-top: 7px;
+    margin: 16px;
+    bottom: 16px;
+
+}

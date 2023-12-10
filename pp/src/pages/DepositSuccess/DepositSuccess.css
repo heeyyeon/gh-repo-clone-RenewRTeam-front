@@ -1,0 +1,36 @@
+.DepositSuccess {
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'SOYOMapleRegular';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DepositSuccess-text {
+    color: #000;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.checkButton {
+    position: fixed;
+    width: 358px;
+    height: 34px;
+    border-radius: 12px;
+    background: #214FC7;
+    color: #FFFFFF;
+    margin: 16px;
+    text-align: center;
+    padding-top: 13px; 
+    bottom: 16px;
+}
+
+p {
+    margin : 0px;
+}
