@@ -1,0 +1,36 @@
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 15px;
+    position: relative;
+    font-family: SOYOMapleRegular;
+}
+
+.plusbutton {
+    width: 60px;
+    height: 60px;
+    background-color: #214FC7;
+    border-radius: 70%;
+    position: absolute; /* absolute 포지션 사용 */
+    bottom: 100px; /* 아래 여백 조정 */
+    right: 16px;
+    font-family: SOYOMapleRegular;
+
+}
+
+.plusbutton img {
+    width: 23px;
+    height: 23px;
+    padding: 19px;
+    align-items: center;
+    display: block; /* 이미지를 블록 요소로 표시 */
+    margin: auto;
+    font-family: SOYOMapleRegular;
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
