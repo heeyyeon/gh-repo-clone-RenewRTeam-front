@@ -3,6 +3,7 @@
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
 import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import './Detail.css';
 
 function Detail() {
@@ -45,6 +46,7 @@ function Detail() {
 
     return (
         <div className='Detail-wrapper'>
+            <BackDataTradeList listTitle="" />
             <div className='Detail-image'>
                 <img src={model ? model.image : 'default_image.png'} alt={model ? model.title : 'Loading...'} />
             </div>
