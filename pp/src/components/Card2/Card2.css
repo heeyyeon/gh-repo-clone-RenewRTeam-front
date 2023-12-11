@@ -1,0 +1,49 @@
+.card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: SOYOMapleRegular;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto; /* 이미지 비율에 따라 조정*/
+  }
+
+
+  .card-tag {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: SOYOMapleRegular;
+  }
+
+  /* 각 태그에 대한 배경 색상 설정 */
+.card-tag.chamyeojung {
+  background-color: #214fc7; /* 파랑색 */
+}
+
+.card-tag.geojul {
+  background-color: #C12A2A; /* 빨강색 */
+}
+
+.card-tag.seungin {
+  background-color: #0B9E0B; /* 초록색 */
+}
+.card-tag.daegi {
+  background-color: #A5A5A5; /* 회색 */
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
