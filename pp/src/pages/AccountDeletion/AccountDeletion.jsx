@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import UserNavbar from '../../components/UserNavbar/UserNavbar';
-import './AccountDeletion.css'; // 해당 CSS 파일을 만들어 주세요
+import './AccountDeletion.css'; 
 
 function AccountDeletion() {
   const [isConfirmed, setIsConfirmed] = useState(false);
