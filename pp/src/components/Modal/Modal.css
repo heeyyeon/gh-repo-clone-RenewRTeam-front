@@ -30,6 +30,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: 'SOYOMapleRegular';
 }
 
 .confirm-button {
@@ -43,3 +44,9 @@
   background-color: white;
   font-size: 18px;
 }
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+  }
