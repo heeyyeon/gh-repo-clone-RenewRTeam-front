@@ -22,4 +22,5 @@
   .data-trade-list-container img {
     position: absolute;
     left: 8px; /* 왼쪽 여백 */
+    cursor: pointer;
   }
