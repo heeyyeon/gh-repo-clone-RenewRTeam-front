@@ -10,7 +10,7 @@
     /*overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
     position: relative; /* 포지셔닝 컨텍스트를 지정 */
     background-color: white; /*나중에 white로 색상 바꾸기*/
-    margin-top: 70px;
+    /* margin-top: 70px; */
   }
   
   .signup-type-logo {
@@ -92,3 +92,9 @@
     border: 1px solid;
     border-color: #214FC7;
   }
+
+  @font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

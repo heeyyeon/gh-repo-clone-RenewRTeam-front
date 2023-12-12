@@ -1,10 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SignupType2.css'; 
 import DATABANK from '../../images/DATABANK.svg';
 import Messages from '../../images/Messages.svg';
 import Profile from '../../images/Profile.svg';
 
 function SignupType() {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/'); // 로그인 페이지로 이동
+  };
+
+  const handleNext = () => {
+    navigate('/register'); // Register 컴포넌트로 이동
+  };
+
   return (
     <div className="signup-type-container">
       <div className="signup-type-logo">
@@ -22,10 +33,10 @@ function SignupType() {
         </div>
       </div>
       <div className="Next-button">
-        <button type="submit">다음</button>
+        <button type="button" onClick={handleNext}>다음</button>
       </div>
       <div className="Back-button">
-        <button type="submit">뒤로</button>
+        <button type="button" onClick={handleBack}>뒤로</button>
       </div>
     </div>
   );

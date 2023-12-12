@@ -8,7 +8,7 @@
   justify-content: center;
   margin: 0 auto; /* 화면을 중앙에 배치 */
   position: relative; /* 포지셔닝 컨텍스트를 지정 */
-  margin-top: 70px;
+  /* margin-top: 70px; */
   justify-content: space-between; /* 위, 아래 여백을 동일하게 조정 */
 }
 
@@ -45,6 +45,10 @@
   resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 합니다. */
 }
 
+.description-input:not(:placeholder-shown) {
+  color: #000; /* 사용자가 입력을 시작하면 폰트 색상을 검은색으로 변경 */
+}
+
 .Next-button button {
   width: 358px;
   height: 53px;
@@ -65,4 +69,10 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

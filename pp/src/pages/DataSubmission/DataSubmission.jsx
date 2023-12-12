@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 // 상단 데이터 제공 컴포넌트, 하단 버튼, 하단바 컴포넌트를 import 합니다.
+import { useNavigate } from 'react-router-dom';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 import './DataSubmission.css';
 import camera from '../../images/camera.svg';
 
 function DataSubmission() {
   const [image, setImage] = useState(null);
   const [description, setDescription] = useState('');
+  const navigate = useNavigate();
 
   // 이미지 파일 처리 함수
   const handleImageChange = (e) => {
@@ -19,8 +21,8 @@ function DataSubmission() {
   // 폼 제출 함수
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 이미지와 설명 데이터 처리 로직 구현
     console.log(image, description);
+    navigate('/cardlist'); // CardList 페이지로 이동
   };
 
   return (
@@ -50,10 +52,10 @@ function DataSubmission() {
           onChange={(e) => setDescription(e.target.value)}
         />
          <div className="Next-button">
-        <button type="submit">참여하기</button>
+         <button type="submit" style={{ backgroundColor: image ? '#214FC7' : '#A5A5A5' }}>참여하기</button>
       </div>
       </form>
-      <DataNavbar />
+      <DataNavbar2 />
     </div>
   );
 }

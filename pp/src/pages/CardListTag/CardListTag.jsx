@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import './CardListTag.css';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import UserNavbar from '../../components/UserNavbar/UserNavbar';
+import UserNavbar2 from '../../components/UserNavbar2/UserNavbar2';
 
 function CardListTag({ listTitle }) {
     // 임시 데이터로 상태 초기화
@@ -59,7 +59,7 @@ function CardListTag({ listTitle }) {
       <BackDataTradeList listTitle="내가 쓴 글" />
       <div className="card-list">
         {cards.map((card, index) => (
-          <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함 */}
+          <Link key={index} to={`/delete/${card.id}`} style={{ textDecoration: 'none' }}>  {/* id 값을 URL에 포함 */}
             <Card 
               image={card.image} 
               title={card.title} 
@@ -70,7 +70,7 @@ function CardListTag({ listTitle }) {
           </Link>
         ))}
       </div>
-      <UserNavbar />
+      <UserNavbar2 />
     </>
   );
 }

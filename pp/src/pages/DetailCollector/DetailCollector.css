@@ -12,6 +12,7 @@
     width: 390px;
     height: 390px;
     vertical-align: middle;
+    font-family: SOYOMapleRegular;
 }
 
 .Detail-title {
@@ -40,28 +41,33 @@
     padding-top: 1%;
     padding-bottom: 16px;
     margin: 16px;
+    font-family: SOYOMapleRegular;
 }
 
 .footer-button {
     position: fixed;
     width: 358px;
     height: 34px;
+    bottom: 100px;  /* 버튼위치 조정 */
     border-radius: 12px;
     background: #214FC7;
     color: #FFFFFF;
     margin: 16px;
     text-align: center;
     padding-top: 7px; 
+    font-family: SOYOMapleRegular;
 }
 
 .Detail-user {
     display: flex;
     justify-content: space-between;
     padding: 13px;
+    font-family: SOYOMapleRegular;
 }
 
 .Detail-user p {
     margin-top: 10px; /* 기본 마진 제거 */
+    font-family: SOYOMapleRegular;
 }
 
 @font-face {

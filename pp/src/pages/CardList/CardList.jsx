@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import './CardList.css';
+import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 
 function CardList({ listTitle }) {
     // 임시 데이터로 상태 초기화
@@ -52,7 +53,7 @@ function CardList({ listTitle }) {
 
   return (
     <>
-      <DataTradeList listTitle={listTitle} />
+      <DataTradeList listTitle={"데이터 거래 목록"} />
       <div className="card-list">
         {cards.map((card, index) => (
           <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함 */}
@@ -65,6 +66,7 @@ function CardList({ listTitle }) {
           </Link>
         ))}
       </div>
+      <DataNavbar2 />
     </>
   );
 }

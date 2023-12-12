@@ -8,7 +8,7 @@
     height: calc(100vh - 56px); 
     overflow-y: auto; /* 스크롤 가능하도록 설정 */
     padding-bottom: 56px; /* .footer-button 높이 + .nav-bar 높이 */
-    margin-top: 70px;
+    /* margin-top: 70px; */
 }
 
 .Detail-image img{
@@ -51,9 +51,8 @@
     background: #214FC7;
     color: #FFFFFF;
     text-align: center;
-    padding-top: 13px; /* 버튼 내부 콘텐츠가 중앙에 오도록 조정 */
-    margin-bottom: 10px; /* .nav-bar와의 간격을 위해 조정 */
-   
+    padding-top: 13px;
+    margin-bottom: 10px; 
 }
 
 .Detail-user {

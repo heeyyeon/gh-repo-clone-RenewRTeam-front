@@ -8,7 +8,7 @@
     justify-content: center;
     margin: 0 auto; /* 화면을 중앙에 배치 */
     position: relative; /* 포지셔닝 컨텍스트를 지정 */
-    margin-top: 70px;
+    /* margin-top: 70px; */
     justify-content: space-between; /* 위, 아래 여백을 동일하게 조정 */
   }
   
@@ -87,4 +87,10 @@
     object-position: center;
     border-radius: 8px;
   }
+
+  @font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
   

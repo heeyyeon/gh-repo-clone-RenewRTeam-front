@@ -2,7 +2,8 @@
 //import { useParams } from 'react-router-dom';
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
-import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import { useNavigate } from 'react-router-dom';
+import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import './Detail.css';
 
@@ -18,6 +19,12 @@ function Detail() {
         description: '😎 안녕하세요. 저희는 고양이 전신 사진을 100장 정도 확보하는 것을 목표로 하고 있습니다...',
     });
 
+    const navigate = useNavigate();
+
+    const handleParticipate = () => {
+        navigate('/DataSubmission'); // DataSubmission 페이지로 이동
+    };
+    
 // function Detail() {
 //     const [model, setModel] = useState(null);
 //     const { id } = useParams();
@@ -46,7 +53,7 @@ function Detail() {
 
     return (
         <div className='Detail-wrapper'>
-            <BackDataTradeList listTitle="" />
+            <BackDataTradeList listTitle="데이터 수집 상세" />
             <div className='Detail-image'>
                 <img src={model ? model.image : 'default_image.png'} alt={model ? model.title : 'Loading...'} />
             </div>
@@ -73,8 +80,8 @@ function Detail() {
                     {model ? model.description : 'Loading...'}
                 </p>
             </div>
-            <div className='footer-button'>참여하기</div>
-            <DataNavbar />
+            <div className='footer-button' onClick={handleParticipate}>참여하기</div>
+            <DataNavbar2 />
         </div>
     );
 }

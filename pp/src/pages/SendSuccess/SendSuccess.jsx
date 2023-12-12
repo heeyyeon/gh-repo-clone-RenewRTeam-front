@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SendSuccess.css';
-import PointNavbar from '../../components/PointNavbar/PointNavbar';
+import RewardNavbar from '../../components/RewardNavbar/RewardNavbar';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 
 function SendSuccess() {
+    const navigate = useNavigate();
+
+    function onCheckButtonClick() {
+        navigate('/reward'); // Reward 컴포넌트로 이동
+    }
+
     return (
         <>
         <BackDataTradeList listTitle={"리워드 이체"} />
@@ -13,9 +20,9 @@ function SendSuccess() {
                 <p>안전하게</p>
                 <p>이체되었습니다.</p>
             </div>
-            <div className='checkButton'>확인</div>
+             <div className='checkButton' onClick={onCheckButtonClick}>확인</div>
         </div>
-        <PointNavbar />
+        <RewardNavbar />
         </>
     )
 }

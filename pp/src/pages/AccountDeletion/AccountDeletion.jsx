@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import UserNavbar from '../../components/UserNavbar/UserNavbar';
+import UserNavbar2 from '../../components/UserNavbar2/UserNavbar2';
 import './AccountDeletion.css'; 
 
 function AccountDeletion() {
@@ -38,7 +38,7 @@ function AccountDeletion() {
       <button onClick={handleDeletionConfirm} className="deletion-button">
         탈퇴
       </button>
-      <UserNavbar />
+      <UserNavbar2 />
     </div>
   );
 }

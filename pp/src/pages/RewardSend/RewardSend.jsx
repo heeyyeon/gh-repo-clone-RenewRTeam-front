@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./RewardSend.css";
+import { useNavigate } from 'react-router-dom';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import PointNavbar from '../../components/PointNavbar/PointNavbar';
+import RewardNavbar from '../../components/RewardNavbar/RewardNavbar';
 
 function RewardSend() {
+  const navigate = useNavigate();
   const [model] = useState({
     databank: "이상한 hex형",
     mywallet: "얘도 이상한 hex형",
@@ -14,8 +16,8 @@ function RewardSend() {
   const [isAmountInputVisible, setIsAmountInputVisible] = useState(false);
 
   function onNextClickHandler() {
-    console.log("다음 버튼을 눌렀어요!");
-  }
+    navigate('/sendsuccess'); // SendSuccess 컴포넌트로 이동
+}
 
   function onAmountInputChangeHandler(e) {
     setAmount(e.target.value);
@@ -42,7 +44,7 @@ function RewardSend() {
           fontWeight: "bolder",
         }}
       >
-        데이터뱅크 ({model ? model.databank : "Loading..."})
+        데이터뱅크 ({model ? model.databank : "Loading..."}) 가
       </p>
       <p
         style={{
@@ -96,7 +98,7 @@ function RewardSend() {
       </p>
       <div className={`nextbutton ${isAmountInputVisible ? 'blue' : ''}`} onClick={onNextClickHandler}>다음</div>
     </div>
-    <PointNavbar />
+    <RewardNavbar />
     </>
   );
 }

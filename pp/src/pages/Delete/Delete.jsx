@@ -82,12 +82,19 @@
 
 import React, { useState } from 'react';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import DataNavbar from '../../components/DataNavbar/DataNavbar';
+import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 import Modal from '../../components/Modal/Modal';
 import './Delete.css';
+import { useNavigate } from 'react-router-dom';
 
 function Delete() {
   // 상태 변수
+  const navigate = useNavigate();
+
+  const handleViewOriginal = () => {
+      navigate('/CardListTag'); // CardListTag 컴포넌트로 이동
+  };
+
   const image = 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzExMTBfODcg%2FMDAxNjk5NTg1ODY4Mzcz.TDhp9IF3JpEmdcryX5Sj3eP69RxQBIBBxz-N4Rbk2VIg.bO3a3_R5kBasub2IlbIHA7QYqhbxQv-FMgr0U-UTnbgg.JPEG.eh60135%2F%25B8%25D5%25C4%25A1%25C5%25B2%25B0%25ED%25BE%25E7%25C0%25CC%25C1%25BE%25B7%25F914.jpg&type=a340'; // 예시 이미지 URL
   const description = '저희집 고양이입니다! 예쁘게 봐주세요 :)'; // 예시 설명 텍스트
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -97,11 +104,11 @@ function Delete() {
     setIsModalVisible(true); // 모달 활성화
   };
 
-  // 모달에서 삭제를 확정하는 핸들러
   const handleConfirmDelete = () => {
     console.log('사진이 삭제되었습니다.');
     setIsModalVisible(false); // 모달 비활성화
-  };
+    navigate('/CardListTag'); // CardListTag 컴포넌트로 이동
+};
 
   // 모달에서 삭제를 취소하는 핸들러
   const handleCancelDelete = () => {
@@ -115,7 +122,7 @@ function Delete() {
         <img src={image} alt="Uploaded" className="uploaded-image" />
         <p className="description">{description}</p> 
       </div>
-      <button className="view-button">원본 글 보러가기</button>
+      <button onClick={handleViewOriginal} className="view-button">원본 글 보러가기</button>
       <button onClick={handleDelete} className="delete-button">삭제</button>
       {isModalVisible && (
         <Modal
@@ -123,7 +130,7 @@ function Delete() {
           onCancel={handleCancelDelete}
         />
       )}
-      <DataNavbar />
+      <DataNavbar2 />
     </div>
   );
 }

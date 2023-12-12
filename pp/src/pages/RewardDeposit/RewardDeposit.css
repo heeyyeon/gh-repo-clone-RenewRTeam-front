@@ -22,3 +22,9 @@
 .nextbutton.blue {
     background-color: rgb(33, 79, 199);
 }
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
