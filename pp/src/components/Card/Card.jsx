@@ -19,7 +19,7 @@
 import React from 'react';
 import './Card.css';
 
-function Card({ image, title, description, tag }) {
+function Card({ image, title, description, limit, tag }) {
 
   let tagClassName = '';
 
@@ -39,6 +39,7 @@ function Card({ image, title, description, tag }) {
       <div className="card-details">
         <h2 className="card-title">{title}</h2>
         <p className="card-description">{description}</p>
+        <p className="card-limit">👥 {limit}</p>
         {tag && <span className={`card-tag ${tagClassName}`}>{tag}</span>}
       </div>
     </div>
