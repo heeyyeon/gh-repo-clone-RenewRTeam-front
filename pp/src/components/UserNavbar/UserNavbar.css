@@ -14,9 +14,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Pretendard;
+  font-family: 'SOYOMapleRegular';
   font-weight: 500;
   font-size: 12px;
+  text-decoration: none;
 }
 
 .nav-icon {
@@ -27,4 +28,10 @@
 
 .text-gray span {
   color: #A5A5A5;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
 }

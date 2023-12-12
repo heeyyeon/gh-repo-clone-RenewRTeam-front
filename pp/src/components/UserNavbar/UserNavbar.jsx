@@ -16,7 +16,7 @@ function NavItem({ icon, label, className }) {
 function UserNavbar() {
   return (
     <div className="nav-bar">
-      <NavItem icon={dataIcon} label="데이터 거래" className="text-gray" />
+      <NavItem icon={dataIcon} label="데이터 수집" className="text-gray" />
       <NavItem icon={pointIcon} label="잔액" className="text-gray" />
       <NavItem icon={userIcon} label="사용자" />
     </div>
