@@ -36,15 +36,31 @@
 // reportWebVitals();
 
 
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import './index.css';
+// import App from './App'; // App 컴포넌트 임포트 (배포할 때 주석 풀기)
+// // import Login from './pages/Login/Login';
+// import { BrowserRouter } from 'react-router-dom';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <BrowserRouter>
+//     <App /> 
+//   </BrowserRouter>
+// );
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App'; // App 컴포넌트 임포트 (배포할 때 주석 풀기)
-import Delete from './pages/Delete/Delete';
+import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Delete /> 
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );
