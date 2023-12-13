@@ -1,14 +1,14 @@
 .nav-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    width: 390px;
-    background: #FFF;
-    bottom: 0;
-    z-index: 1000;
-    margin-top: 13px;
-    font-family: SOYOMapleRegular;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 100px;
+width: 390px;
+background: #FFF;
+bottom: 0;
+z-index: 1000;
+margin-top: 13px;
+font-family: SOYOMapleRegular;
 }
 
 .nav-item {
@@ -19,6 +19,7 @@ font-family: SOYOMapleRegular;
 font-weight: 500;
 font-size: 12px;
 text-decoration: none;
+color: black;
 }
 
 .nav-icon {
