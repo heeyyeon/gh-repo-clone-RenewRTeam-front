@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
     width: 390px;  /* 화면 너비를 390픽셀로 설정 */
-    height: 844px; /* 화면 높이를 844픽셀로 설정 */
+    height: 744px; /* 화면 높이를 844픽셀로 설정 */
     margin: 0 auto; /* 화면을 중앙에 배치 */
     /*overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
     position: relative; /* 포지셔닝 컨텍스트를 지정 */
@@ -21,7 +21,7 @@ code {
 
 .index {
   width: 390px;  /* 화면 너비를 390픽셀로 설정 */
-  height: 844px; /* 화면 높이를 844픽셀로 설정 */
+  height: 744px; /* 화면 높이를 844픽셀로 설정 */
   margin: 0 auto; /* 화면을 중앙에 배치 */
   /*overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
   position: relative; /* 포지셔닝 컨텍스트를 지정 */

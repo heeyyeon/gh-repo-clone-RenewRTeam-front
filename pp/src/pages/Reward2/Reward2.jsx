@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Trading from '../../components/Trading/Trading';
 import './Reward2.css';
-import cat from "../../images/cat.png";
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import PointNavbar from '../../components/PointNavbar/PointNavbar';
+import { useNavigate } from 'react-router-dom';
 
 
 function Reward2({listTitle}) {
+
+    const navigate = useNavigate();
 
     const [model] = useState({
         myReward: '본인이 가진 리워드',
@@ -18,7 +20,7 @@ function Reward2({listTitle}) {
     });
 
     function onSendClickHandler() {
-        console.log('이체하기 버튼을 눌렀어요')
+        navigate('/RewardDeposit');
     }
 
     return (
@@ -26,7 +28,7 @@ function Reward2({listTitle}) {
         <DataTradeList listTitle={"잔액"} />
         <div className='reward'>
             <p style={{ 
-                color: 'black', margin:'16px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 리워드는</p>
+                color: 'black', margin:'16px 0px 0px 16px', fontSize:'16px', fontSize:'16px'}}>당신의 잔액은</p>
             <p style={{margin:'6px 16px', fontSize:'32px'}}><b>{model ? model.myReward : "Loading..."} </b></p>
             <p style={{margin:'6px 16px', fontSize:'16px'}}>입니다.</p>
             <div className='DepositButton' onClick={onSendClickHandler}>입금하기</div>

@@ -13,7 +13,7 @@
     background-color: #214FC7;
     border-radius: 70%;
     position: absolute; /* absolute 포지션 사용 */
-    bottom: 100px; /* 아래 여백 조정 */
+    bottom: 15%; /* 아래 여백 조정 */
     right: 16px;
     font-family: SOYOMapleRegular;
 

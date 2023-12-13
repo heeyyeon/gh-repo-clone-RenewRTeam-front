@@ -3,20 +3,21 @@
     height: 844px;
     margin: 0 auto;
     position: relative;
-    font-family: 'SOYOMapleRegular';
+    font-family: SOYOMapleRegular;
 }
 
 .nextbutton {
     position: fixed;
     width: 358px;
     height: 34px;
+    bottom: 100px;
     border-radius: 12px;
     background-color: #A5A5A5;
     color: white;
     text-align: center;
     padding-top: 7px;
     margin: 16px;
-    bottom: 16px;
+    font-family: SOYOMapleRegular;
 }
 
 .nextbutton.blue {

@@ -5,26 +5,42 @@
   height: 100px;
   width: 390px;
   background: #FFF;
-  bottom: 0;
-  z-index: 1000;
-  margin-top: 13px;
+  position: fixed; /* 고정 위치 */
+  bottom: 0; /* 하단에 배치 */
+  font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
-  
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Pretendard;
-    font-weight: 500;
-    font-size: 12px;
-  }
-  
-  .nav-icon {
-    width: 24px; 
-    height: 24px; 
-    margin-bottom: 4px; 
-  }
-  
-  .text-gray span {
-    color: #A5A5A5;
-  }
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: SOYOMapleRegular;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.nav-icon {
+  width: 24px; 
+  height: 24px; 
+  margin-bottom: 4px; 
+  font-family: SOYOMapleRegular;
+  text-decoration: none;
+}
+
+.text-gray span {
+  color: #A5A5A5;
+  font-family: SOYOMapleRegular;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}
+
+.span {
+  text-decoration: none;
+}

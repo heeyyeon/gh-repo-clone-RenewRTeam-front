@@ -1,26 +1,36 @@
 .data-trade-list-container {
-    display: flex;
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    background: white;
-    color: black;
-    padding: 8px;
-    width: 390px;
-    height: 44px;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .data-trade-list-title {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0; /* 기본 마진 제거 */
-    flex-grow: 1;
-  }
-  
-  .data-trade-list-container img {
-    position: absolute;
-    left: 8px; /* 왼쪽 여백 */
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  background: white;
+  color: black;
+  padding: 0px 8px 0px 0px;
+  width: 390px;
+  height: 44px;
+  text-align: center;
+  margin-top: 13px;
+  /* margin-bottom: 16px; */
+  /* margin: 0px; */
+  font-family: SOYOMapleRegular;
+}
+
+.data-trade-list-title {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0; /* 기본 마진 제거 */
+  flex-grow: 1;
+  font-family: SOYOMapleRegular;
+}
+
+.data-trade-list-container img {
+  position: absolute;
+  left: 8px; /* 왼쪽 여백 */
+  font-family: SOYOMapleRegular;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

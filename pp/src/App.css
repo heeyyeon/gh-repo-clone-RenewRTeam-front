@@ -39,12 +39,12 @@
 
 .app {
   width: 390px;  /* 화면 너비를 390픽셀로 설정 */
-  height: 844px; /* 화면 높이를 844픽셀로 설정 */
+  height: 744px; /* 화면 높이를 844픽셀로 설정 */
   margin: 0 auto; /* 화면을 중앙에 배치 */
   /*overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
   position: relative; /* 포지셔닝 컨텍스트를 지정 */
   background-color: white; /*나중에 white로 색상 바꾸기*/
-  /* margin-top: 70px; */
+  /* margin-top: 0px; */
   /*max-height: 100vh; /* 뷰포트 높이에 맞춰 최대 높이 설정 */
   /*overflow-y: auto; /* 세로 스크롤바가 필요할 때만 표시 */
 }

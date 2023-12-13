@@ -8,6 +8,7 @@
   flex-direction: column;
   position: relative;
   font-family: SOYOMapleRegular;
+  text-decoration: none;
 }
 
 .card-image {
@@ -17,22 +18,20 @@
 
 .card-details {
   padding: 8px;
+  text-decoration: none;
 }
 
 .card-title {
   font-size: 16px;
   color: #333333;
   margin-bottom: 4px;
+  text-decoration: none;
 }
 
 .card-description {
   font-size: 14px;
   color: #666666;
-}
-
-.card-limit {
-  font-size: 14px;
-  color: #666666;
+  text-decoration: none;
 }
 
 .card-tag {

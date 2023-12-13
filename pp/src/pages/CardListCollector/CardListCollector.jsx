@@ -1,14 +1,22 @@
 import React, { useState } from 'react'; //api 받아오면 삭제하기
 // import React, { useEffect, useState } from 'react'; //api 받아오면 주석 풀기
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import axios from 'axios';  //api 받아오면 주석 풀기
 import Card from '../../components/Card/Card';
 import DataTradeList from '../../components/DataTradeList/DataTradeList';
 import './CardListCollector.css';
 import DataNavbar from '../../components/DataNavbar/DataNavbar';
 import plus from '../../images/plus.svg';
+import DataSubmissionForm from '../DataSubmissionForm/DataSubmissionForm';
 
 function CardListCollector({ listTitle }) {
+
+  const navigate = useNavigate();
+
+  const handlePlusButtonClick = () => {
+    navigate('/DataSubmissionForm')
+  };
+
     // 임시 데이터로 상태 초기화
     const [cards] = useState([
       {
@@ -57,7 +65,7 @@ function CardListCollector({ listTitle }) {
       <DataTradeList listTitle="데이터 거래 목록" />
       <div className="card-list">
         {cards.map((card, index) => (
-          <Link key={index} to={`/detail/${card.id}`}>  {/* id 값을 URL에 포함 */}
+          <Link key={index} to={`/DetailCollector/${card.id}`}>  {/* id 값을 URL에 포함 */}
             <Card 
               image={card.image} 
               title={card.title} 
@@ -67,7 +75,7 @@ function CardListCollector({ listTitle }) {
           </Link>
         ))}
       </div>
-      <div className='plusbutton'>
+      <div className='plusbutton' onClick={handlePlusButtonClick}>
           <img src={plus} alt='plus' />
       </div>
       <DataNavbar />

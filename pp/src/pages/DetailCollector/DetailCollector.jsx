@@ -2,11 +2,19 @@
 //import { useParams } from 'react-router-dom';
 // import axios from 'axios'; //*api 불러오면 주석해제
 import React, { useState } from 'react'; //api 불러오면 삭제
+import { Link, useNavigate } from 'react-router-dom';
 import './DetailCollector.css';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import DataNavbar from '../../components/DataNavbar/DataNavbar';
 
 function DetailCollector() {
+
+    const navigate = useNavigate();
+
+    const handlemanagebutton = () => {
+        navigate('/CardListCollector2');
+    }
+
     // 임시 데이터로 상태 초기화
     const [model] = useState({
         image: 'https://via.placeholder.com/150',
@@ -74,7 +82,7 @@ function DetailCollector() {
                     {model ? model.description : 'Loading...'}
                 </p>
             </div>
-            <div className='footer-button'>수집 데이터 관리</div>
+            <div className='footer-button' onClick={handlemanagebutton}>수집 데이터 관리</div>
         </div>
         <DataNavbar />
         </>

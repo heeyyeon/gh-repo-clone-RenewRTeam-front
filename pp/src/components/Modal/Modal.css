@@ -1,14 +1,15 @@
 .custom-modal-backdrop {
   position: fixed; /* 고정 위치 */
-  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정색 배경 */
+  /* background-color: rgba(0, 0, 0, 0.5); 반투명 검정색 배경 */
   display: flex; /* flexbox를 사용해 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
   justify-content: center; /* 수평 중앙 정렬 */
   z-index: 1000; /* 다른 요소보다 위에 나타나도록 z-index 설정 */
   flex-direction: column;
-  width: 390px;  
-  height: 844px;
-  margin: 0 auto; /* 화면을 중앙에 배치 */
+  width: 390px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* height: 100vh; 전체 화면 높이 */
+  margin: 0 auto; /*화면을 중앙에 배치 */
 }
 
 .custom-modal-content {
@@ -17,8 +18,8 @@
   border-radius: 8px; /* 모서리 둥글게 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); /* 그림자 효과 */
   z-index: 1001; /* 백드롭 위에 나타나도록 z-index 설정 */
-  width: 320px;
-  height: 153px;
+  width: 70%;
+  height: 30%;
   text-align: center;
 }
 
@@ -30,7 +31,6 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'SOYOMapleRegular';
 }
 
 .confirm-button {
@@ -44,9 +44,3 @@
   background-color: white;
   font-size: 18px;
 }
-
-@font-face {
-  font-family: 'SOYOMapleRegular';
-  font-weight: normal;
-  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
-  }
