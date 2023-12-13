@@ -69,6 +69,7 @@ import CardList from './pages/CardList/CardList';
 import Detail from './pages/Detail/Detail';
 import Delete from './pages/Delete/Delete';
 import AccountDeletion from './pages/AccountDeletion/AccountDeletion';
+import OfferAccountDeletion2 from './pages/OfferAccountDeletion2/OfferAccountDeletion2';
 import CardListCollector from './pages/CardListCollector/CardListCollector';
 import CardListCollector2 from './pages/CardListCollector2/CardListCollector2';
 import CardListTag from './pages/CardListTag/CardListTag';
@@ -118,7 +119,8 @@ function App() {
         <Route path='/User2' element={<User2 />} />
         <Route path='/RewardDeposit' element={<RewardDeposit />} />
         <Route path='/DepositSuccess' element={<DepositSuccess />} /> 
-        <Route path='/AccountDeletion' element={<AccountDeletion />} />
+        <Route path='/AccountDeletion' element={<AccountDeletion />} /> {/*데이터 수집자 회원 탈퇴 페이지*/}
+        <Route path='/OfferAccountDeletion2' element={<OfferAccountDeletion2 />} /> {/*데이터 제공자 회원 탈퇴 페이지*/}
         {/* <Route path='/Login' element={<Login />} /> */}
       </Routes>
     </div>

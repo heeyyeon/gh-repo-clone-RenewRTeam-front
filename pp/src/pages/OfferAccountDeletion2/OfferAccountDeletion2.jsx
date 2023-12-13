@@ -1,11 +1,11 @@
-//데이터 수집자의 회원 탈퇴 페이지
+//데이터 제공자의 회원 탈퇴 페이지
 import React, { useState } from 'react';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
-import UserNavbar from '../../components/UserNavbar/UserNavbar';
-import './AccountDeletion.css'; 
+import UserNavbar2 from '../../components/UserNavbar2/UserNavbar2';
+import './OfferAccountDeletion2.css'; 
 import { useNavigate } from 'react-router-dom';
 
-function AccountDeletion() {
+function OfferAccountDeletion2() {
   const [isConfirmed, setIsConfirmed] = useState(false);
   const navigate = useNavigate();
   const handleCheckboxChange = (event) => {
@@ -41,9 +41,9 @@ function AccountDeletion() {
       <button onClick={handleDeletionConfirm} className="deletion-button">
         탈퇴
       </button>
-      <UserNavbar />
+      <UserNavbar2 />
     </div>
   );
 }
 
-export default AccountDeletion;
+export default OfferAccountDeletion2;
