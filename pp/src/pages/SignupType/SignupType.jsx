@@ -39,6 +39,7 @@ import './SignupType.css';
 import DATABANK from '../../images/DATABANK.svg';
 import Messages from '../../images/Messages.svg';
 import Profile from '../../images/Profile.svg';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 
 function SignupType() {
   const [selectedType, setSelectedType] = useState('');
@@ -62,6 +63,7 @@ function SignupType() {
 
   return (
     <div className="signup-type-container">
+      <BackDataTradeList listTitle="" />
       <div className="signup-type-logo">
          <img src={DATABANK} alt="DATABANK Logo" />
        </div>

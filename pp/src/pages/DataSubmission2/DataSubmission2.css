@@ -1,96 +1,83 @@
 .data-submission-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 390px;  
-    height: 844px;
-    /* background-color: #f0ece5; */
-    justify-content: center;
-    margin: 0 auto; /* 화면을 중앙에 배치 */
-    position: relative; /* 포지셔닝 컨텍스트를 지정 */
-    /* margin-top: 70px; */
-    justify-content: space-between; /* 위, 아래 여백을 동일하게 조정 */
-  }
-  
-  .image-upload-section {
-    border: 2px dashed #214FC7; 
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 35px;
-    cursor: pointer;
-    width: 358px;
-    height: 250px;
-    margin-left: 4px;
-    margin-top: 20px;
-  }
-  
-  .upload-placeholder {
-    color: #214FC7; 
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Pretendard;
-    top: 50%; /* 상위 요소 중앙에 배치 */
-    left: 50%; /* 상위 요소 중앙에 배치 */
-    transform: translate(-50%, -50%); /* 정확히 중앙에 오도록 조정 */
-    width: 100%; /* 너비를 부모의 100%로 설정 */
-    height: 100%; /* 높이를 부모의 100%로 설정 */
-    position: absolute;
-  }
-  
-  .description-input {
-    width: 358px;
-    height: 250px;
-    margin-left: 2px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 함 */
-  }
-  
-  .Next-button button {
-    width: 358px;
-    height: 53px;
-    margin-left: 4px;
-    padding: 1rem;
-    background-color: #214FC7;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 100px;
-  }
-  
-  .submission-form textarea{
-    color:#A5A5A5;
-    font-family: Pretendard;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-  }
-  
-  .description-input {
-    color: #6f6f6f; /* 기본 폰트 색상을 회색으로 지정 */
-  }
-  
-  .description-input:not(:placeholder-shown) {
-    color: #000; /* 사용자가 입력을 시작하면 폰트 색상을 검은색으로 변경 */
-  }
-
-  .image-upload-section img {
-    width: 100%; /* 컨테이너의 전체 너비를 차지하도록 설정 */
-    height: 250px; /* 이미지의 높이가 자동으로 조정되도록 설정 */
-    object-fit: cover; /* 이미지가 비율을 유지하면서 컨테이너를 꽉 채우도록 설정 */
-    object-position: center;
-    border-radius: 8px;
-  }
-
-  @font-face {
-    font-family: 'SOYOMapleRegular';
-    font-weight: normal;
-    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 390px;  
+  /* height: 844px; */
+  /* background-color: #f0ece5; */
+  justify-content: center;
+  margin: 0 auto; /* 화면을 중앙에 배치 */
+  position: relative; /* 포지셔닝 컨텍스트를 지정 */
+  /* margin-top: 70px; */
+  justify-content: space-between; /* 위, 아래 여백을 동일하게 조정 */
 }
-  
+
+.image-upload-section {
+  border: 2px dashed blue; /* 이 부분은 디자인에 맞게 색상을 조정하세요. */
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 35px;
+  cursor: pointer;
+  width: 358px;
+  height: 250px;
+  margin-left: 4px;
+  margin-top: 20px;
+}
+
+.upload-placeholder {
+  color: #214FC7; 
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  font-family: Pretendard;
+}
+
+.upload-placeholder img {
+  width: 23px;
+  height: 21px;
+}
+
+.description-input {
+  width: 358px;
+  height: 250px;
+  margin-left: 2px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  resize: none; /* 사용자가 텍스트 영역의 크기를 조절하지 못하도록 합니다. */
+}
+
+.description-input:not(:placeholder-shown) {
+  color: #000; /* 사용자가 입력을 시작하면 폰트 색상을 검은색으로 변경 */
+}
+
+.Next-button button {
+  width: 358px;
+  height: 53px;
+  margin-left: 4px;
+  padding: 1rem;
+  background-color: #A5A5A5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.submission-form textarea{
+  color:#A5A5A5;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

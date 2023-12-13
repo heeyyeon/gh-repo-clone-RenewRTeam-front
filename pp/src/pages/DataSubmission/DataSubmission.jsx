@@ -35,7 +35,7 @@ function DataSubmission() {
           ) : (
             <div className="upload-placeholder">
               <img src={camera} alt="camera Logo" />
-              여기를 클릭해서 사진을 추가하세요!
+              <span>여기를 클릭해서 사진을 추가하세요!</span>
             </div>
           )}
           <input

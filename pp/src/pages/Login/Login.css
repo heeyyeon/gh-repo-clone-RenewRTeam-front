@@ -1,64 +1,62 @@
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 390px;  /* 화면 너비를 390픽셀로 설정 */
-    height: 844px; /* 화면 높이를 844픽셀로 설정 */
-    margin: 0 auto; /* 화면을 중앙에 배치 */
-    /*overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
-    position: relative; /* 포지셔닝 컨텍스트를 지정 */
-    background-color: white; /*나중에 white로 색상 바꾸기*/
-    /* margin-top: 70px; */
-  }
-    
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 400px;
-    margin-top: 35px;
-  }
-  
-  .login-form input {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #DFDFDF;
-    border-radius: 5px;
-    color: #A5A5A5;
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  .login-form input:not(:placeholder-shown) {
-    color: #000; /* 사용자가 입력을 시작하면 폰트 색상을 검은색으로 변경 */
-  }
-  
-  .login-form button {
-    padding: 1rem;
-    background-color: #214FC7;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .login-actions {
-    margin-top: 1rem;
-    text-align: center;
-    color:#214FC7;
-    font-family: Pretendard;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-  }
-
-  @font-face {
-    font-family: 'SOYOMapleRegular';
-    font-weight: normal;
-    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 390px;  /* 화면 너비를 390픽셀로 설정 */
+  margin: 0 auto; /* 화면을 중앙에 배치 */
+  /*overflow: hidden; /* 내용이 지정된 크기를 넘어가면 숨김 처리 */
+  position: relative; /* 포지셔닝 컨텍스트를 지정 */
+  background-color: white; /*나중에 white로 색상 바꾸기*/
+  /* margin-top: 70px; */
 }
   
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 35px;
+}
+
+.login-form input {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  color: #A5A5A5;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login-form input:not(:placeholder-shown) {
+  color: #000; /* 사용자가 입력을 시작하면 폰트 색상을 검은색으로 변경 */
+}
+
+.login-form button {
+  padding: 1rem;
+  background-color: #214FC7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-actions {
+  margin-top: 1rem;
+  text-align: center;
+  color:#214FC7;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: 'SOYOMapleRegular';
+  font-weight: normal;
+  src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
+}

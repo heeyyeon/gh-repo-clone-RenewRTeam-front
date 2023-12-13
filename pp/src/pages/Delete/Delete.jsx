@@ -128,6 +128,7 @@ function Delete() {
         <Modal
           onConfirm={handleConfirmDelete}
           onCancel={handleCancelDelete}
+          msg={"데이터를 삭제하시겠습니까?"}
         />
       )}
       <DataNavbar2 />
@@ -136,4 +137,3 @@ function Delete() {
 }
 
 export default Delete;
-

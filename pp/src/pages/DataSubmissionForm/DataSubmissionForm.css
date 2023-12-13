@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 390px;  
-  height: 844px;
+  /* height: 844px; */
   /* background-color: #f0ece5; */
   justify-content: center;
   margin: 0 auto; /* 화면을 중앙에 배치 */
@@ -25,6 +25,7 @@
   /* margin-top: 20px; */
   margin: 0px;
   font-family: SOYOMapleRegular;
+  position: relative;
 }
 
 .upload-placeholder {
@@ -41,6 +42,12 @@
   width: 100%; /* 너비를 부모의 100%로 설정 */
   height: 100%; /* 높이를 부모의 100%로 설정 */
   position: absolute;
+  margin-top: 0px;
+}
+
+.upload-placeholder img {
+  width: 23px;
+  height: 21px;
 }
 
 .Next-button button {
@@ -121,6 +128,12 @@
 .submission-form{
   align-items: center;
 }
+
+.camera-icon {
+  width: 23px;
+  height: 21px;
+}
+
 
 @font-face {
   font-family: 'SOYOMapleRegular';

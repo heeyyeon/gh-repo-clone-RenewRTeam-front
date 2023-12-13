@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   width: 390px;  
-  height: 844px;
   /* background-color: #f0ece5; */
   margin: 0 auto; /* 화면을 중앙에 배치 */
   position: relative; /* 포지셔닝 컨텍스트를 지정 */

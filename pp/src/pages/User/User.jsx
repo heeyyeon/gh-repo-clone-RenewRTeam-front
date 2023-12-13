@@ -16,7 +16,7 @@ function User() {
   });
 
   const myContentButton = () => {
-    navigate("/CardListCollector");
+    navigate("/CardListTag");
   };
 
   const logOutButton = () => {

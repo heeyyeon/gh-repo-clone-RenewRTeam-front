@@ -5,7 +5,7 @@
     font-family: SOYOMapleRegular;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 56px); 
+    /* height: calc(100vh - 56px);  */
     overflow-y: auto; /* 스크롤 가능하도록 설정 */
     padding-bottom: 56px; /* .footer-button 높이 + .nav-bar 높이 */
     /* margin-top: 70px; */

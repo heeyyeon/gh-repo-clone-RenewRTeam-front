@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css'; 
 import DATABANK from '../../images/DATABANK.svg';
+import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 
 function Register() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function Register() {
 
   return (
     <div className="register-container">
+      <BackDataTradeList listTitle="" />
       <div className="logo">
       <img src={DATABANK} alt="DATABANK Logo" />
       </div>
