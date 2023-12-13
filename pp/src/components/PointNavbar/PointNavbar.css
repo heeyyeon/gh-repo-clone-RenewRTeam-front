@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: 43px;
   width: 390px;
   background: #FFF;
-  position: fixed; /* 고정 위치 */
-  bottom: 0; /* 하단에 배치 */
-  font-family: SOYOMapleRegular;
-  text-decoration: none;
+  z-index: 1000;
+  margin-top: 13px;
+  font-family: 'SOYOMapleRegular';
+  position: fixed; /* 페이지 스크롤에 따라 고정되도록 수정 */
+  bottom: 0; /* 페이지 맨 하단에 고정되도록 수정 */
 }
 
 .nav-item {
