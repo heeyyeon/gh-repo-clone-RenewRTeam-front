@@ -35,7 +35,7 @@ function CardList({ listTitle }) {
   // ]);
 
   const [cards, setCards] = useState([]); // 카드 데이터를 상태로 관리
-  const endpoint = "/collects/myCollect";
+  const endpoint = "/collects";
 
   useEffect(() => {
     const fetchCards = async () => {
