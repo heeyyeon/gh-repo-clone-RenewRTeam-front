@@ -66,7 +66,7 @@ function Reward() {
           당신의 리워드는
         </p>
         <p style={{ margin: "6px 16px", fontSize: "32px" }}>
-          <b>{models ? models.myReward : "Loading..."} </b>
+          <b>{models ? models.total : "Loading..."} </b>
         </p>
         <p style={{ margin: "6px 16px", fontSize: "16px" }}>입니다.</p>
         {/** 버튼 컴포넌트 들어올 자리, 지금은 만든게 없어서 대체 */}
@@ -74,15 +74,16 @@ function Reward() {
           <b>이체하기</b>
         </div>
         <p style={{ color: "#A5A5A5", marginLeft: "16px" }}>거래내역</p>
-        {models.map((model, index) => (
-          <Trading
-            image={transaction_icon}
-            name={model ? model.sender : "Loading..."}
-            date={model ? model.createdAt : "Loading..."}
-            trading={model ? model.amount : "Loading..."}
-            balance={model ? model.total : "Loading..."}
-          />
-        ))}
+        {models.responses &&
+          models.responses.map((model, index) => (
+            <Trading
+              image={transaction_icon}
+              name={model ? model.sender : "Loading..."}
+              date={model ? model.createdAt : "Loading..."}
+              trading={model ? model.amount : "Loading..."}
+              balance={model ? model.total : "Loading..."}
+            />
+          ))}
       </div>
       <RewardNavbar />
     </>

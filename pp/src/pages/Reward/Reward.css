@@ -4,6 +4,9 @@
     /* overflow: hidden; */
     position: relative;
     font-family: 'SOYOMapleRegular';
+    overflow-y: auto; /* 내용이 넘칠 때 스크롤바 활성화 */
+    position: relative;
+    padding-bottom: 60px; /* 하단바와의 여백을 위한 패딩 */
 }
 
 .reward-button {
@@ -23,3 +26,13 @@
     align-items: center; /* 수직 중앙 정렬 */
     justify-content: center; /* 수평 중앙 정렬 */
 }
+
+.trading-class {
+    /* 기존 스타일 */
+    margin-left: 10px; /* 왼쪽 여백을 줄임 */
+  }
+  
+  .balance-class {
+    /* 기존 스타일 */
+    margin-left: 10px; /* 왼쪽 여백을 줄임 */
+  }
