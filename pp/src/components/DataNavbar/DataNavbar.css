@@ -20,7 +20,8 @@
   font-weight: 500;
   font-size: 12px;
   text-decoration: none;
-}
+  color: black;
+  }
 
 .nav-icon {
   width: 24px; 

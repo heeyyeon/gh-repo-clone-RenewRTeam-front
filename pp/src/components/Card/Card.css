@@ -34,6 +34,12 @@
   text-decoration: none;
 }
 
+.card-limit {
+  font-size: 14px;
+  color: #666666;
+  text-decoration: none;
+}
+
 .card-tag {
   position: absolute;
   top: 5%;

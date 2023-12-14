@@ -47,8 +47,8 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const endpoint = 'YOUR_API_ENDPOINT';
-
+    const endpoint = '/member/sign-in';
+  
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
@@ -57,18 +57,15 @@ function Login() {
         },
         body: JSON.stringify({ email, password }),
       });
-
+  
       if (response.ok) {
         const data = await response.json();
-        console.log('로그인 성공:', data);
-
-        // 사용자 유형에 따라 다른 페이지로 이동
-        if (data.userType === 'data_offer') {
-          navigate('/CardList'); // 데이터 제공자 메인 페이지로 이동
-        } else if (data.userType === 'data_collector') {
-          navigate('/CardListCollector'); // 데이터 수집자 메인 페이지로 이동
+        if (data.mode === '0') {
+          navigate('/CardListCollector');
+        } else if (data.mode === '1') {
+          navigate('/CardList');
         }
-      } else {
+      }else {
         console.error('로그인 실패:', response);
       }
     } catch (error) {
