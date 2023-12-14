@@ -47,29 +47,30 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const endpoint = '/member/sign-in';
-  
+    const endpoint = "/member/sign-in";
+
     try {
       const response = await fetch(endpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
       });
-  
+
       if (response.ok) {
         const data = await response.json();
-        if (data.mode === '0') {
-          navigate('/CardListCollector');
-        } else if (data.mode === '1') {
-          navigate('/CardList');
+        window.sessionStorage.setItem("token", data.data.accessToken);
+        if (data.data.mode === 0) {
+          navigate("/CardListCollector");
+        } else if (data.data.mode === 1) {
+          navigate("/CardList");
         }
-      }else {
-        console.error('로그인 실패:', response);
+      } else {
+        console.error("로그인 실패:", response);
       }
     } catch (error) {
-      console.error('API 호출 중 오류 발생:', error);
+      console.error("API 호출 중 오류 발생:", error);
     }
   };
   

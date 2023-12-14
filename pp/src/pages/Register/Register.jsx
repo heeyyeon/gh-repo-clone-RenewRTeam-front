@@ -19,9 +19,15 @@ function Register() {
    useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const modeParam = searchParams.get('mode');
-    setMode(modeParam);
+    if (modeParam === "data_collector") {
+      console.log("0")
+      setMode(0); //데이터 수집자
+    } else {
+      console.log("1")
+      setMode(1); //데이터 제공자
+    }
   }, [location]);
-
+  
      const handleSubmit = async (event) => {
     event.preventDefault();
 
