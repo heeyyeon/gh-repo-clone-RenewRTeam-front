@@ -102,7 +102,7 @@ function App() {
         <Route path="/CardList" element={<CardList />} /> {/*데이터 제공자 메인 페이지*/}
         <Route path="/CardListCollector" element={<CardListCollector />} />  {/*데이터 수집자 메인 페이지*/}
         <Route path="/detail/:id" element={<Detail />} /> {/*데이터 제공자 메인 페이지에서 상세 페이지*/}
-        <Route path="/DataSubmission" element={<DataSubmission />} /> {/*데이터 제공글 작성*/}
+        <Route path="/DataSubmission/:id" element={<DataSubmission />} /> {/*데이터 제공글 작성*/}
         <Route path="/Reward" element={<Reward />} /> {/*리워드 페이지*/}
         <Route path="/RewardSend" element={<RewardSend />} /> {/*리워드 이체 페이지*/}
         <Route path="/SendSuccess" element={<SendSuccess />} /> {/*리워드 이체 성공 페이지*/}

@@ -1,8 +1,12 @@
 .reward {
     width: 390px;
     margin: 0 auto;
+    /* overflow: hidden; */
     position: relative;
-    font-family: SOYOMapleRegular;
+    font-family: 'SOYOMapleRegular';
+    overflow-y: auto; /* 내용이 넘칠 때 스크롤바 활성화 */
+    position: relative;
+    padding-bottom: 60px; /* 하단바와의 여백을 위한 패딩 */
 }
 
 .DepositButton {

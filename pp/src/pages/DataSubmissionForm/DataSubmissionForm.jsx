@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 // import { useParams } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import BackDataTradeList from "../../components/BackDataTradeList/BackDataTradeList";
 import DataNavbar from "../../components/DataNavbar/DataNavbar";
 import "./DataSubmissionForm.css";
 import camera from "../../images/camera.svg";
 
 function DataSubmissionForm() {
+  const [image, setImage] = useState(null);
+  const [content, setContent] = useState("");
   const navigate = useNavigate();
+  const { id } = useParams();
   // const [image, setImage] = useState(null);
-  const [image, setImage] = useState(
+  // const [image, setImage] = useState(
     // "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzExMTBfODcg%2FMDAxNjk5NTg1ODY4Mzcz.TDhp9IF3JpEmdcryX5Sj3eP69RxQBIBBxz-N4Rbk2VIg.bO3a3_R5kBasub2IlbIHA7QYqhbxQv-FMgr0U-UTnbgg.JPEG.eh60135%2F%25B8%25D5%25C4%25A1%25C5%25B2%25B0%25ED%25BE%25E7%25C0%25CC%25C1%25BE%25B7%25F914.jpg&type=a340"
-  ); // 이미지 URL
+  // ); // 이미지 URL
   // 향후 서버로부터 이미지를 업로드하거나 상태를 업데이트하는 로직을 구현할 때 setImage 함수를 사용할 예정(아직 warning)
 
   const handleImageChange = (e) => {

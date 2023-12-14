@@ -13,7 +13,8 @@
 
 .card-image {
   width: 100%;
-  height: auto; /* 이미지 비율에 따라 조정*/
+  height: 200px; /* 고정 높이 */
+  object-fit: cover; /* 이미지 비율 유지 */
 }
 
 .card-details {
