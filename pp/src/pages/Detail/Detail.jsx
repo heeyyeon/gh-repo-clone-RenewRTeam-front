@@ -14,7 +14,7 @@ function Detail() {
   const navigate = useNavigate();
 
   const handleParticipate = () => {
-    navigate("/DataSubmission/:id"); // DataSubmission 페이지로 이동
+    navigate(`/DataSubmission/${id}`); // DataSubmission 페이지로 이동
   };
 
   useEffect(() => {

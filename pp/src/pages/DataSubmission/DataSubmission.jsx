@@ -61,7 +61,11 @@ function DataSubmission() {
             <img src={URL.createObjectURL(image)} alt="Uploaded" />
           ) : (
             <div className="upload-placeholder">
-              <img src={camera} alt="camera Logo" />
+              <img
+                src={camera}
+                alt="camera Logo"
+                style={{ width: 100, height: 100 }}
+              />
               <span>여기를 클릭해서 사진을 추가하세요!</span>
             </div>
           )}

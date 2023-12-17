@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import "./RewardDeposit.css";
 import PointNavbar from "../../components/PointNavbar/PointNavbar";
 import BackDataTradeList from "../../components/BackDataTradeList/BackDataTradeList";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 function RewardDeposit() {
-
   const navigate = useNavigate();
 
   const [model] = useState({
-    databank: "이상한 hex형",
-    mywallet: "얘도 이상한 hex형",
-    currentbalance: "얼만큼 있는지",
+    databank: "0x4183...",
+    mywallet: "0x92Ac...",
+    currentbalance: "2500",
   });
 
   const [amount, setAmount] = useState("");
   const [isAmountInputVisible, setIsAmountInputVisible] = useState(false);
 
   function onNextClickHandler() {
-    navigate('/DepositSuccess')
+    navigate("/DepositSuccess");
   }
 
   function onAmountInputChangeHandler(e) {
