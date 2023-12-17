@@ -8,32 +8,63 @@ import camera from "../../images/camera.svg";
 
 function DataSubmissionForm() {
   const [image, setImage] = useState(null);
+  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [reward, setReward] = useState("");
+  const [capacity, setCapacity] = useState("");
   const navigate = useNavigate();
   const { id } = useParams();
   // const [image, setImage] = useState(null);
   // const [image, setImage] = useState(
-    // "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzExMTBfODcg%2FMDAxNjk5NTg1ODY4Mzcz.TDhp9IF3JpEmdcryX5Sj3eP69RxQBIBBxz-N4Rbk2VIg.bO3a3_R5kBasub2IlbIHA7QYqhbxQv-FMgr0U-UTnbgg.JPEG.eh60135%2F%25B8%25D5%25C4%25A1%25C5%25B2%25B0%25ED%25BE%25E7%25C0%25CC%25C1%25BE%25B7%25F914.jpg&type=a340"
+  // "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzExMTBfODcg%2FMDAxNjk5NTg1ODY4Mzcz.TDhp9IF3JpEmdcryX5Sj3eP69RxQBIBBxz-N4Rbk2VIg.bO3a3_R5kBasub2IlbIHA7QYqhbxQv-FMgr0U-UTnbgg.JPEG.eh60135%2F%25B8%25D5%25C4%25A1%25C5%25B2%25B0%25ED%25BE%25E7%25C0%25CC%25C1%25BE%25B7%25F914.jpg&type=a340"
   // ); // 이미지 URL
   // 향후 서버로부터 이미지를 업로드하거나 상태를 업데이트하는 로직을 구현할 때 setImage 함수를 사용할 예정(아직 warning)
 
+  // 이미지 파일 처리 함수
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setImage(URL.createObjectURL(e.target.files[0]));
+      setImage(e.target.files[0]);
     }
   };
 
-  const navigateToCardListCollector = () => {
-    navigate("/CardListCollector");
-  };
+  // const navigateToCardListCollector = () => {
+  //   navigate("/CardListCollector");
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+    // e.preventDefault();
     // 이미지와 설명 데이터 처리 로직 구현
-    console.log(image);
+    // console.log(image);
     // 이 부분에서 서버로 이미지와 설명을 보내는 서버로 데이터를 보내는 API 호출 구현
-    navigateToCardListCollector();
-  };
+    // navigateToCardListCollector();
+
+    try {
+      const location = "Gachon";
+      const endpoint = `/colects/${id}`;
+
+      const formData = new FormData();
+      formData.append("image", image);
+
+      const json = JSON.stringify({ title: title, content: content, location: location });
+      const post = new Blob([json], { type: "application/json" });
+
+      formData.append("post", post);
+
+      const response = fetch(endpoint, {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+        },
+        body: formData,
+      });
+
+      console.log(response);
+      navigate("/cardListCollector");
+    } catch (error) {
+      alert(error);
+      console.error("API 호출 중 오류 발생:", error);
+    }
+  }; 
 
   return (
     <>
@@ -65,19 +96,19 @@ function DataSubmissionForm() {
           </div>
           <form class="data-form">
             <div class="form-group">
-              <label for="title">기본 정보</label>
+              <label for="texttitle">기본 정보</label>
             </div>
             <div class="form-group">
-              <input type="제목" placeholder="제목" required />
-              <input type="내용" placeholder="내용" required />
+              <input type="제목" placeholder="제목" value={title} onChange={(e) => setTitle(e.target.value)} required />
+              <input type="내용" placeholder="내용" value={content} onChange={(e) => setContent(e.target.value)} required />
             </div>
 
             <div class="form-group">
-              <label for="title">리워드 정보</label>
+              <label for="texttitle">리워드 정보</label>
             </div>
             <div class="form-group">
-              <input type="리워드" placeholder="리워드" required />
-              <input type="참여자 수" placeholder="참여자 수" required />
+              <input type="리워드" placeholder="리워드" value={reward} onChange={(e) => setReward(e.target.value)} required />
+              <input type="참여자 수" placeholder="참여자 수" value={capacity} onChange={(e) => setCapacity(e.target.value)} required />
             </div>
           </form>
 
