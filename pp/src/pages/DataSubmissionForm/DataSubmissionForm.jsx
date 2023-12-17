@@ -81,7 +81,10 @@ function DataSubmissionForm() {
             ) : (
               // 이미지가 없을 때, 카메라 아이콘과 텍스트를 표시하는 플레이스홀더 보여줌
               <div className="upload-placeholder">
-                <img src={camera} alt="camera Logo" className="camera-icon" />
+                <img src={camera}
+                 alt="camera Logo"
+                className="camera-icon" 
+                style={{ width: 24, height: 24 }}/>
                 <span>여기를 클릭해서 사진을 추가해주세요!</span>
               </div>
             )}

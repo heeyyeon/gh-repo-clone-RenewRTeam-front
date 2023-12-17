@@ -26,6 +26,7 @@
   margin: 0px;
   font-family: SOYOMapleRegular;
   position: relative;
+  margin-top: 30px;
 }
 
 .upload-placeholder {
@@ -42,7 +43,6 @@
   width: 100%; /* 너비를 부모의 100%로 설정 */
   height: 100%; /* 높이를 부모의 100%로 설정 */
   position: absolute;
-  margin-top: 0px;
 }
 
 .upload-placeholder img {
@@ -100,6 +100,8 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+
 
 .form-group {
   display: flex;

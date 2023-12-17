@@ -21,7 +21,7 @@
   width: 358px;
   height: 250px;
   margin-left: 4px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .upload-placeholder {
@@ -38,6 +38,7 @@
 .upload-placeholder img {
   width: 23px;
   height: 21px;
+  border-radius: 8px;
 }
 
 .description-input {
@@ -74,6 +75,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+  margin-top: 30px;
 }
 
 

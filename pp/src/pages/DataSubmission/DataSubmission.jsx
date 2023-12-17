@@ -64,7 +64,7 @@ function DataSubmission() {
               <img
                 src={camera}
                 alt="camera Logo"
-                style={{ width: 100, height: 100 }}
+                style={{ width: 24, height: 24 }}
               />
               <span>여기를 클릭해서 사진을 추가하세요!</span>
             </div>
