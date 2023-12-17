@@ -10,15 +10,38 @@ function RewardDeposit() {
   const [model] = useState({
     databank: "0x4183...",
     mywallet: "0x92Ac...",
-    currentbalance: "2500",
+    currentbalance: "99999",
   });
 
   const [amount, setAmount] = useState("");
   const [isAmountInputVisible, setIsAmountInputVisible] = useState(false);
 
-  function onNextClickHandler() {
-    navigate("/DepositSuccess");
-  }
+  const onNextClickHandler = async () => {
+    const endpoint = "/reward/deposit?amount=" + amount;
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+        },
+      });
+
+      if(response.ok) {
+        const data = await response.json();
+        console.log("성공:", data);
+        navigate("/DepositSuccess");
+      } else {
+        const errorText = await response.text();
+        alert(`실패: ${errorText}`);
+      }
+    } catch (error) {
+      alert("오류가 발생했습니다.");
+      console.error("API 호출 중 오류 발생:", error);
+    }
+  };
+
 
   function onAmountInputChangeHandler(e) {
     setAmount(e.target.value);
@@ -76,11 +99,12 @@ function RewardDeposit() {
             width: "164px",
             height: "20px",
             margin: "16px 16px 16px 16px",
-            fontSize: "24px",
+            fontSize: "20px",
             color: "#A5A5A5",
             backgroundColor: "#ffffff",
             border: "none",
             textAlign: "center",
+            color: "#000",
           }}
         />
         {amount && (

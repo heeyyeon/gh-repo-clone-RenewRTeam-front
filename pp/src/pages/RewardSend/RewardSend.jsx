@@ -89,11 +89,12 @@ function RewardSend() {
             width: "164px",
             height: "20px",
             margin: "16px 16px 16px 16px",
-            fontSize: "24px",
+            fontSize: "20px",
             color: "#A5A5A5",
             backgroundColor: "#ffffff",
             border: "none",
             textAlign: "center",
+            color: "#000",
           }}
         />
         {amount && (
