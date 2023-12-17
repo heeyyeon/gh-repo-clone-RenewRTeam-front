@@ -32,7 +32,7 @@ function Detail() {
 
         if (response.ok) {
           const data = await response.json();
-          setModel(data);
+          setModel(data.data);
 
           console.log("성공:", data);
         } else {
@@ -78,7 +78,7 @@ function Detail() {
         >
           [사진조건]
         </h4>
-        <ul>
+        <ul style={{padding: "0px 16px 16px 25px"}}>
           {/* 조건 내용을 동적으로 렌더링 */}
           {model &&
             model.requirements.map((condition, index) => (
