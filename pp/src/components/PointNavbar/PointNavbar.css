@@ -11,37 +11,31 @@
   position: fixed; /* 페이지 스크롤에 따라 고정되도록 수정 */
   bottom: 0; /* 페이지 맨 하단에 고정되도록 수정 */
 }
-
+  
 .nav-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   font-family: SOYOMapleRegular;
   font-weight: 500;
   font-size: 12px;
   text-decoration: none;
+  color: black;
 }
 
 .nav-icon {
   width: 24px; 
   height: 24px; 
   margin-bottom: 4px; 
-  font-family: SOYOMapleRegular;
-  text-decoration: none;
 }
 
 .text-gray span {
   color: #A5A5A5;
-  font-family: SOYOMapleRegular;
-  text-decoration: none;
+  font-family: 'SOYOMapleRegular';
 }
 
 @font-face {
   font-family: 'SOYOMapleRegular';
   font-weight: normal;
   src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
-}
-
-.span {
-  text-decoration: none;
-}
+  }
