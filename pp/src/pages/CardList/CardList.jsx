@@ -72,7 +72,7 @@ function CardList({ listTitle }) {
       <div className="card-list">
         {/* {cards.map((card, index) => ( */}
         {Array.isArray(cards) && cards.map((card, index) => (
-          <Link key={index} to={`/detail/${card.id}`}>
+          <Link key={index} to={`/detail/${card.id}`} style={{ textDecoration: 'none' }}>
             {" "}
             {/* id 값을 URL에 포함 */}
             <Card

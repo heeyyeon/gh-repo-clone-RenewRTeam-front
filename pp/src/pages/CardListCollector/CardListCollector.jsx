@@ -81,7 +81,7 @@ function CardListCollector({ listTitle }) {
       <DataTradeList listTitle="데이터 거래 목록" />
       <div className="card-list">
         {cards.map((card, index) => (
-          <Link key={index} to={`/DetailCollector/${card.id}`}>  
+          <Link key={index} to={`/DetailCollector/${card.id}`} style={{ textDecoration: 'none' }}>  
           {/* id 값을 URL에 포함 */}
             <Card 
               id={card.id}

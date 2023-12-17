@@ -90,14 +90,14 @@ function Card({ image, title, description, limit, tag }) {
         className="card-image"
         style={{ height: 100 }}
       />
-      <div className="card-details">
-        <h2 className="card-title">{title}</h2>
-        <p className="card-description">{description}</p>
-        <p className="card-limit">👥 {limit}</p>
+      <div className="card-details" style={{ height: 100 }}>
+        <h2 className="card-title" style={{ textDecoration: 'none' }}>{title}</h2>
+        <p className="card-description" style={{ textDecoration: 'none' }}>{description}</p>
+        <p className="card-limit" style={{ textDecoration: 'none' }}>👥 {limit}</p>
         {tag && (
           <span
             className={`card-tag ${tagClassName}`}
-            style={{ backgroundColor: "blue" }}
+            style={{ backgroundColor: "blue", textDecoration: 'none' }}
           >
             {tag}
           </span>

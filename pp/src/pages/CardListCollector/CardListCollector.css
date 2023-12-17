@@ -8,15 +8,16 @@
 }
 
 .plusbutton {
-width: 60px;
-height: 60px;
-background-color: #214FC7;
-border-radius: 70%;
-position: absolute; /* absolute 포지션 사용 */
-bottom: 15%; /* 아래 여백 조정 */
-right: 16px;
-font-family: SOYOMapleRegular;
-cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #214FC7;
+    border-radius: 70%;
+    position: absolute; /* absolute 포지션 사용 */
+    bottom: 5%; /* 아래 여백 조정 */
+    right: 16px;
+    font-family: SOYOMapleRegular;
+    cursor: pointer;
+
 }
 
 .plusbutton img {
