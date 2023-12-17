@@ -54,7 +54,7 @@ function CardListTag({ listTitle }) {
 
         if (response.ok) {
           const data = await response.json();
-          setCards(data);
+          setCards(data.data);
 
           console.log("성공:", data);
         } else {
@@ -83,10 +83,11 @@ function CardListTag({ listTitle }) {
             {" "}
             {/* id 값을 URL에 포함 */}
             <Card
-              image={card.imageUrl}
-              title={card.title}
-              description={card.content}
-              limit={card.location}
+              id={card.id}
+              image={card.collect.imageUrl}
+              title={card.collect.title}
+              // description={card.collect.capacity}
+              limit={card.collect.capacity}
               tag={card.offerStatus}
             />
           </Link>

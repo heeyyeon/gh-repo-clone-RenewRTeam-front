@@ -50,7 +50,7 @@ function CardList({ listTitle }) {
 
         if (response.ok) {
           const data = await response.json();
-          setCards(data);
+          setCards(data.data);
 
           console.log("성공:", data);
         } else {
@@ -70,7 +70,8 @@ function CardList({ listTitle }) {
     <>
       <DataTradeList listTitle={"데이터 거래 목록"} />
       <div className="card-list">
-        {cards.map((card, index) => (
+        {/* {cards.map((card, index) => ( */}
+        {Array.isArray(cards) && cards.map((card, index) => (
           <Link key={index} to={`/detail/${card.id}`}>
             {" "}
             {/* id 값을 URL에 포함 */}

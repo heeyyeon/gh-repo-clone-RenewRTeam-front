@@ -3,8 +3,8 @@ import Trading from "../../components/Trading/Trading";
 import { useNavigate } from "react-router-dom";
 import "./Reward2.css";
 import DataTradeList from "../../components/DataTradeList/DataTradeList";
-import RewardNavbar from "../../components/RewardNavbar/RewardNavbar";
 import transaction_icon from "../../images/transaction_icon.svg";
+import PointNavbar from '../../components/PointNavbar/PointNavbar';
 
 function Reward2() {
   const navigate = useNavigate();
@@ -63,7 +63,7 @@ function Reward2() {
             fontSize: "16px",
           }}
         >
-          당신의 리워드는
+          당신의 잔액은
         </p>
         <p style={{ margin: "6px 16px", fontSize: "32px" }}>
           <b>{models ? models.total : "Loading..."} </b>
@@ -85,7 +85,7 @@ function Reward2() {
             />
           ))}
       </div>
-      <RewardNavbar />
+      <PointNavbar />
     </>
   );
 }
