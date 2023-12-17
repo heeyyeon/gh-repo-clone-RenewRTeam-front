@@ -88,7 +88,11 @@ function CardListTag({ listTitle }) {
               title={card.collect.title}
               // description={card.collect.capacity}
               limit={card.collect.capacity}
-              tag={card.offerStatus}
+              tag={card.offerStatus === "ATTEND" 
+              ? "참여" 
+              : card.offerStatus === "REJECT" 
+              ? "거절" 
+              : "대기"}
             />
           </Link>
         ))}
