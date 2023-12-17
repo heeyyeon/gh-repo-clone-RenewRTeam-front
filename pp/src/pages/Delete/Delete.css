@@ -14,6 +14,7 @@
   width: 358px;
   text-align: center;
   margin-bottom: 35px;
+  margin-top: 15px;
 }
 
 .uploaded-image {
@@ -44,13 +45,14 @@
   background-color: #FFF;
   color: #214FC7;
   border: 1px solid #214FC7;
-  margin-top: 3px;
+  margin-top: 23px;
 }
 
 .delete-button {
   background-color: #C12A2A;
   color: white;
   border: none;
+  margin-top: 20px;
 }
 
 .description {
