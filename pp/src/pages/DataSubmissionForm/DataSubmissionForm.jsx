@@ -23,7 +23,9 @@ function DataSubmissionForm() {
   // 이미지 파일 처리 함수
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setImage(e.target.files[0]);
+      const file = e.target.files[0];
+      const imageUrl = URL.createObjectURL(file);
+      setImage(imageUrl); // 이미지 URL을 상태로 설정
     }
   };
 
@@ -71,7 +73,7 @@ function DataSubmissionForm() {
       <div className="data-submission-container">
         <BackDataTradeList listTitle="데이터 수집 생성" />
         <form onSubmit={handleSubmit} className="submission-form">
-          <div
+        <div
             className="image-upload-section"
             onClick={() => document.getElementById("image-input").click()}
           >
@@ -81,10 +83,7 @@ function DataSubmissionForm() {
             ) : (
               // 이미지가 없을 때, 카메라 아이콘과 텍스트를 표시하는 플레이스홀더 보여줌
               <div className="upload-placeholder">
-                <img src={camera}
-                 alt="camera Logo"
-                className="camera-icon" 
-                style={{ width: 24, height: 24 }}/>
+                <img src={camera} alt="camera Logo" className="camera-icon" style={{ width: 24, height: 24 }}/>
                 <span>여기를 클릭해서 사진을 추가해주세요!</span>
               </div>
             )}
