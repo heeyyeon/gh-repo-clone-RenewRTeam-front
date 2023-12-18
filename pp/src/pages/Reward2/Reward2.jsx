@@ -18,7 +18,7 @@ function Reward2() {
   // });
 
   const handleTransferClick = () => {
-    navigate("/RewardSend"); // RewardSend 컴포넌트로 이동
+    navigate("/RewardDeposit"); // RewardSend 컴포넌트로 이동
   };
   const [models, setModels] = useState([]);
   const endpoint = "/reward/history";
