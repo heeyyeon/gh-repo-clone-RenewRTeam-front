@@ -80,14 +80,17 @@
 
 // export default Delete;
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BackDataTradeList from '../../components/BackDataTradeList/BackDataTradeList';
 import DataNavbar2 from '../../components/DataNavbar2/DataNavbar2';
 import Modal from '../../components/Modal/Modal';
 import './Delete.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function Delete() {
+  const [model, setModel] = useState(null);
+  const {id} = useParams();
+  
   // 상태 변수
   const navigate = useNavigate();
 
@@ -114,6 +117,36 @@ function Delete() {
   const handleCancelDelete = () => {
     setIsModalVisible(false); // 모달 비활성화
   };
+
+  useEffect(() => {
+    const endpoint = `/offers/${id}`;
+
+    const fetchCards = async () => {
+      try {
+        const response = await fetch(endpoint, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+          },
+        });
+
+        if(response.ok) {
+          const data = await response.json();
+          setModel(data.data);
+
+          console.log("성공:" , data);
+        } else {
+          const errorText = await response.text();
+          alert(`실패: ${errorText}`);
+        }
+      } catch (error) {
+        alert("오류가 발생했습니다.");
+        console.error("API 호출 중 오류 발생:", error);
+      }
+    };
+    fetchCards();
+  }, []);
 
   return (
     <div className={`delete-container ${isModalVisible ? 'backdrop' : ''}`}>
