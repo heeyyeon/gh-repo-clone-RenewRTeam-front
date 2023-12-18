@@ -10,7 +10,7 @@ function RewardDeposit() {
   const [model, setModel] = useState({
     databank: "0x4183...",
     mywallet: "0x92Ac...",
-    currentbalance: "99999",
+    // currentbalance: "99999",
   });
 
   const [amount, setAmount] = useState("");
@@ -30,7 +30,6 @@ function RewardDeposit() {
 
         if (response.ok) {
           const data = await response.json();
-          //TODO: 데이터를 사용하여 현재 잔액을 업데이트
           setModel(prevState => ({
             ...prevState,
             currentbalance: data.data
