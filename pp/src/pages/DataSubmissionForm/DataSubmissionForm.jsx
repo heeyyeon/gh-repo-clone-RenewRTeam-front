@@ -115,7 +115,8 @@ function DataSubmissionForm() {
           </form>
 
           <div className="Next-button">
-            <button type="submit" onClick={handleSubmit}>
+            <button 
+            type="submit" onClick={handleSubmit} style={{ backgroundColor: image ? "#214FC7" : "#A5A5A5" }}>
               생성
             </button>
           </div>

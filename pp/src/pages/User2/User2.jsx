@@ -1,5 +1,5 @@
 //데이터 수집자의 사용자 페이지
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./User2.css";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import DataTradeList from "../../components/DataTradeList/DataTradeList";
@@ -11,9 +11,7 @@ function User2() {
 
   const navigate = useNavigate();
 
-  const [model] = useState({
-    name: "본인이름",
-  });
+  const [model, setModel] = useState("");
 
   const myContentButton = () => {
     navigate("/CardListCollector");
@@ -36,11 +34,42 @@ function User2() {
     navigate("/AccountDeletion");
   };
 
+  useEffect(() => {
+    const endpoint = `/member/name`;
+
+    const getUserName = async () => {
+      try {
+        const response = await fetch(endpoint, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+          },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setModel(data.data);
+
+          console.log("성공:", data);
+        } else {
+          const errorText = await response.text();
+          alert(`실패: ${errorText}`);
+        }
+      } catch (error) {
+        alert("오류가 발생했습니다.");
+        console.error("API 호출 중 오류 발생:", error);
+      }
+    };
+
+    getUserName();
+  }, []); //*api 받아오면 더미데이터 지우고 주석 풀기
+
   return (
     <>
       <div className="user">
-      <DataTradeList listTitle={"사용자"} />
-      {isModalVisible && (
+        <DataTradeList listTitle={"사용자"} />
+        {isModalVisible && (
           <Modal
             onConfirm={handleConfirm}
             onCancel={handleCancle}
@@ -55,7 +84,7 @@ function User2() {
             fontFamily: "SOYOMapleRegular",
           }}
         >
-          <b>{model ? model.name : "Loading..."}님, 안녕하세요.</b>
+          <b>{model ? model : "Loading..."}님, 안녕하세요.</b>
         </p>
 
         <div className="user-menu">

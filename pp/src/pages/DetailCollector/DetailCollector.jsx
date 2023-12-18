@@ -11,7 +11,7 @@ function DetailCollector() {
   const navigate = useNavigate();
 
   const handlemanagebutton = () => {
-    navigate("/CardListCollector2");
+    navigate(`/CardListCollector2/${id}`);
   };
 
   // 임시 데이터로 상태 초기화

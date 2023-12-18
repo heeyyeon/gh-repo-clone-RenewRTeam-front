@@ -114,7 +114,7 @@ function App() {
         {/* <Route path='/CardListCollector' element={<CardListCollector listTitle={"데이터 수집 목록"} />} /> */}
         <Route path='/DataSubmissionForm' element={<DataSubmissionForm />} />
         <Route path='/DetailCollector/:id' element={<DetailCollector />} />
-        <Route path='/CardListCollector2' element={<CardListCollector2 />} />
+        <Route path='/CardListCollector2/:id' element={<CardListCollector2 />} />
         <Route path='/Reward2' element={<Reward2 />} />
         <Route path='/User2' element={<User2 />} />
         <Route path='/RewardDeposit' element={<RewardDeposit />} />

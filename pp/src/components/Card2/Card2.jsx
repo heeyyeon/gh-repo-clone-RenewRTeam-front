@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card2.css";
 
-function Card2({ image, tag }) {
+function Card2({ image, tag , onClick}) {
   let tagClassName = "";
 
   if (tag === "참여중") {
@@ -15,8 +15,8 @@ function Card2({ image, tag }) {
   }
 
   return (
-    <div className="card">
-      <img src={image} alt="content" className="card-image" />
+    <div className="card" onClick={onClick}>
+      <img src={image} alt="content" className="card-image" style={{height: 200}}/>
       {tag && <span className={`card-tag ${tagClassName}`}>{tag}</span>}
     </div>
   );
