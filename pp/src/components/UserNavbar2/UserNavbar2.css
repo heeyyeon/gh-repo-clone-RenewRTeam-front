@@ -12,31 +12,32 @@
   bottom: 0; /* 페이지 맨 하단에 고정되도록 수정 */
   }
     
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    font-family: SOYOMapleRegular;
-    font-weight: 500;
-    font-size: 12px;
-    text-decoration: none;
-    color: black;
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  font-family: SOYOMapleRegular;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 70px;
+}
+
+.nav-icon {
+width: 24px; 
+height: 24px; 
+margin-bottom: 4px; 
+font-family: 'SOYOMapleRegular';
+}
+
+.text-gray span {
+color: #A5A5A5;
+font-family: 'SOYOMapleRegular';
+}
+
+@font-face {
+    font-family: 'SOYOMapleRegular';
+    font-weight: normal;
+    src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
   }
-  
-  .nav-icon {
-  width: 24px; 
-  height: 24px; 
-  margin-bottom: 4px; 
-  font-family: 'SOYOMapleRegular';
-  }
-  
-  .text-gray span {
-  color: #A5A5A5;
-  font-family: 'SOYOMapleRegular';
-  }
-  
-  @font-face {
-      font-family: 'SOYOMapleRegular';
-      font-weight: normal;
-      src: url("./../../fonts/SOYOMapleRegular.ttf") format("truetype");
-    }
